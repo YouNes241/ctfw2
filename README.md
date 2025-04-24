@@ -47,3 +47,14 @@ GET /api/observations/{id}
 DELETE /api/observations/{id}
 PATCH /api/observations/{id}
 ```
+
+
+## Question 3
+
+Commandes :
+
+```bash
+symfony composer require fakerphp/faker
+symfony composer require doctrine/doctrine-fixtures-bundle --dev
+symfony console doctrine:fixtures:load
+```

@@ -22,8 +22,8 @@ Les propriétés pour représenter les informations d'observations :
 ```bash
 symfony composer install
 symfony console doctrine:database:create
-symfony console make:entity Animal
-symfony console make:entity Observation
+symfony console make:entity 
+symfony console make:entity 
 symfony console make:migration
 symfony console doctrine:migrations:migrate
 symfony server:start --no-tls --listen-ip=0.0.0.0 --d

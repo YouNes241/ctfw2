@@ -17,7 +17,7 @@ Les propriétés pour représenter les informations d'observations :
 * Animal Observé => `Animal (ManyToOne)`
 * Description => `Text`
 
-# Question 2
+## Question 2
 
 ```bash
 symfony composer install
@@ -56,5 +56,6 @@ Commandes :
 ```bash
 symfony composer require fakerphp/faker
 symfony composer require doctrine/doctrine-fixtures-bundle --dev
+symfony console make:fixture
 symfony console doctrine:fixtures:load
 ```

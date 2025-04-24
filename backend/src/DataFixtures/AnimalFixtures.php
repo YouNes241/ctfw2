@@ -149,7 +149,7 @@ class AnimalFixtures extends Fixture
                 for ($i = 0; $i < 50; $i++) {
                     $observation = new Observation();
                     $observation->setDate($faker->dateTimeBetween('-1 year', 'now'));
-                    $observation->setTime($faker->time);
+                    $observation->setTime(\DateTime::createFromFormat('H:i', $faker->time('H:i')));
                     $observation->setLatitude($faker->latitude);
                     $observation->setLongitude($faker->longitude);
                     $observation->setDescription($faker->paragraph);

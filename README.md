@@ -9,3 +9,10 @@ Membres du groupe :
 
 ## Question 1
 
+Les propriétés pour représenter les informations d'observations :
+* Date => `Date`
+* Heure => `Time`
+* Latitude => `Float`
+* Longitude => `Float`
+* Animal Observé => `Animal (ManyToOne)`
+* Description => `Text`

@@ -68,3 +68,16 @@ Commandes :
 ng serve
 ng generate component component/about --standalone
 ```
+
+## Question 5 
+
+Commandes :
+
+```bash
+ng serve
+ng generate interface entity/Animals
+ng generate interface entity/Observables
+ng generate interface entity/ApiResponse
+ng generate service service/Animals
+ng generate service service/Observable
+```

@@ -59,3 +59,12 @@ symfony composer require doctrine/doctrine-fixtures-bundle --dev
 symfony console make:fixture
 symfony console doctrine:fixtures:load
 ```
+
+## Question 4
+
+Commandes :
+
+```bash
+ng serve
+ng generate component component/about --standalone
+```

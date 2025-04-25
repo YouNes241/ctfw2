@@ -4,12 +4,21 @@ namespace App\DataFixtures;
 
 use App\Entity\Animal;
 use App\Entity\Observation;
+use App\Entity\User;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
+use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 use Faker\Factory;
 
 class AnimalFixtures extends Fixture
 {
+    private UserPasswordHasherInterface $hasher;
+
+    public function __construct(UserPasswordHasherInterface $hasher)
+    {
+        $this->hasher = $hasher;
+    }
+
     public function load(ObjectManager $manager): void
     {
                 $faker = Factory::create('fr_FR');
@@ -156,7 +165,14 @@ class AnimalFixtures extends Fixture
                     $observation->setAnimal($animals[$i % 10]);
                     $manager->persist($observation);
                 }
-        
+
+
+                $user = new User();
+                $user->setEmail("us@us.us")
+                ->setPassword($this->hasher->hashPassword($user, 'us'));               
+                $manager->persist($user);
+
+
                 $manager->flush();
     }
 }

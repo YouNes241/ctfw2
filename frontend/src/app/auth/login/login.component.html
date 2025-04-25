@@ -1,0 +1,27 @@
+@if (!auth.isAuthenticated) {
+<form>
+    <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput name="email" type="text" [(ngModel)]="username" required (ngModelChange)="auth.resetError()">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input matInput name="password" type="password" [(ngModel)]="password" required
+            (ngModelChange)="auth.resetError()">
+    </mat-form-field>
+    <div>
+        <button [disabled]="!isValid" mat-raised-button class="primary" (click)="login()">Login</button>
+    </div>
+    <div>
+        <button mat-flat-button [hidden]="!auth.error" class="warn">Authentication failed
+        </button>
+    </div>
+    @if(hasError()) {
+    <div>
+        <p>Auth Failed</p>
+    </div>
+    }
+</form>
+} @else {
+<h1>Welcome {{auth.email}}!</h1>
+}

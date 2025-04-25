@@ -76,8 +76,24 @@ Commandes :
 ```bash
 ng serve
 ng generate interface entity/Animals
-ng generate interface entity/Observables
+ng generate interface entity/Observations
 ng generate interface entity/ApiResponse
 ng generate service service/Animals
-ng generate service service/Observable
+ng generate service service/Observation
+```
+
+
+## Question 9 
+
+Commandes : 
+
+```bash
+symfony composer require lexik/jwt-authentication-bundle
+mkdir -p config/jwt
+openssl genrsa -out config/jwt/private.pem -aes256 4096
+openssl rsa -pubout -in config/jwt/private.pem -out config/jwt/public.pem   
+Password : FWCT2025
+Listener 
+Modification fichiers 
+
 ```

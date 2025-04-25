@@ -1,0 +1,15 @@
+@if(user)
+{
+<form>
+    <mat-form-field>
+        <label>Email: </label>
+        <input matInput name="email" type="text" required [(ngModel)]="user.email" /><br />
+    </mat-form-field>
+    <mat-form-field>
+        <label>Mot de passe : </label>
+        <input matInput name="pswd" type="password" required [(ngModel)]="user.password" /><br />
+    </mat-form-field>
+    <button [disabled]="!valid" (click)="create()">Valider</button>
+    <button (click)="goLogin()">Se Connecter</button>
+</form>
+}
